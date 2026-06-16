@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Konan Lois Nathanael",
-  title: "Développeur d'Applications Digitales",
+  title: "Développeur d'Applications",
   subtitle: "Consultant Full Stack",
   email: "loiskonan3@gmail.com",
   phone: ["+225 05 55 51 56 69", "+225 07 07 09 80 78"],
