@@ -65,8 +65,27 @@ export const experiences = [
   },
 ];
 
-export const projects = [
+export type ProjectImage = {
+  src: string;
+  alt: string;
+  caption: string;
+};
+
+export type Project = {
+  id: string;
+  title: string;
+  subtitle: string;
+  period: string;
+  description: string;
+  tech: string[];
+  highlights: string[];
+  category: "web" | "mobile";
+  images?: ProjectImage[];
+};
+
+export const projects: Project[] = [
   {
+    id: "nsia-sante",
     title: "NSIA Santé",
     subtitle: "Application de gestion de l'infirmerie",
     period: "2024 — 2025",
@@ -80,6 +99,7 @@ export const projects = [
     category: "web",
   },
   {
+    id: "cgestbanka",
     title: "CgestBankA",
     subtitle: "Gestion des contrats",
     period: "2024 — 2025",
@@ -93,6 +113,7 @@ export const projects = [
     category: "web",
   },
   {
+    id: "dataflow",
     title: "Dataflow",
     subtitle: "Transfert de fichiers",
     period: "2024 — 2025",
@@ -106,6 +127,7 @@ export const projects = [
     category: "web",
   },
   {
+    id: "ecom-reseau-mobile-app",
     title: "E-com Réseau Mobile",
     subtitle: "Application Mobile",
     period: "2026",
@@ -117,8 +139,41 @@ export const projects = [
       "API sécurisée avec clé API",
     ],
     category: "mobile",
+    images: [
+      {
+        src: "/assets/projects/ecom-reseau-mobile-app/icone-telephone.png",
+        alt: "E-com Réseau Mobile — icône sur le téléphone",
+        caption: "Icône de l'app sur le téléphone",
+      },
+      {
+        src: "/assets/projects/ecom-reseau-mobile-app/loading.png",
+        alt: "E-com Réseau Mobile — écran de chargement",
+        caption: "Écran de chargement",
+      },
+      {
+        src: "/assets/projects/ecom-reseau-mobile-app/intro.png",
+        alt: "E-com Réseau Mobile — page d'introduction",
+        caption: "Page d'introduction",
+      },
+      {
+        src: "/assets/projects/ecom-reseau-mobile-app/connexion.png",
+        alt: "E-com Réseau Mobile — page de connexion",
+        caption: "Page de connexion",
+      },
+      {
+        src: "/assets/projects/ecom-reseau-mobile-app/accueil.png",
+        alt: "E-com Réseau Mobile — écran d'accueil",
+        caption: "Écran d'accueil",
+      },
+      {
+        src: "/assets/projects/ecom-reseau-mobile-app/menu.png",
+        alt: "E-com Réseau Mobile — menu latéral",
+        caption: "Menu de navigation",
+      },
+    ],
   },
   {
+    id: "ecom-reseau-mobile-web",
     title: "E-com Réseau Mobile",
     subtitle: "Plateforme Web",
     period: "2026",
@@ -130,8 +185,26 @@ export const projects = [
       "Reporting et indicateurs de performance",
     ],
     category: "web",
+    images: [
+      {
+        src: "/assets/projects/ecom-reseau-mobile-web/login.png",
+        alt: "E-com Réseau Mobile — page de connexion",
+        caption: "Page de connexion",
+      },
+      {
+        src: "/assets/projects/ecom-reseau-mobile-web/dashboard.png",
+        alt: "E-com Réseau Mobile — tableau de bord",
+        caption: "Tableau de bord",
+      },
+      {
+        src: "/assets/projects/ecom-reseau-mobile-web/equipe.png",
+        alt: "E-com Réseau Mobile — performance équipe",
+        caption: "Performance équipe",
+      },
+    ],
   },
   {
+    id: "neuroscore",
     title: "NeuroScore",
     subtitle: "Application éducative médicale",
     period: "Oct. — Déc. 2024",
@@ -145,6 +218,7 @@ export const projects = [
     category: "mobile",
   },
   {
+    id: "euphoria-pressing",
     title: "Euphoria Pressing",
     subtitle: "Gestion de pressing",
     period: "Août — Oct. 2024",

@@ -114,8 +114,8 @@ export default function Ambitions() {
       </div>
 
       <Lightbox
-        src={showCover ? ambitions.coverImage.src : null}
-        alt={ambitions.coverImage.alt}
+        images={[ambitions.coverImage]}
+        index={showCover ? 0 : null}
         onClose={() => setShowCover(false)}
       />
     </section>

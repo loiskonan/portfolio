@@ -6,10 +6,7 @@ import Lightbox from "./Lightbox";
 import { personalInfo } from "../data/portfolio";
 
 export default function About() {
-  const [lightboxPhoto, setLightboxPhoto] = useState<{
-    src: string;
-    alt: string;
-  } | null>(null);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   return (
     <section id="apropos" className="py-24 bg-slate-950">
@@ -29,7 +26,7 @@ export default function About() {
                   <button
                     key={photo.src}
                     type="button"
-                    onClick={() => setLightboxPhoto(photo)}
+                    onClick={() => setLightboxIndex(index)}
                     className={`group w-44 sm:w-52 h-60 sm:h-72 rounded-2xl overflow-hidden border-2 shadow-xl transition-transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                       index === 0
                         ? "border-slate-700/50 shadow-blue-500/10"
@@ -100,9 +97,10 @@ export default function About() {
       </div>
 
       <Lightbox
-        src={lightboxPhoto?.src ?? null}
-        alt={lightboxPhoto?.alt ?? ""}
-        onClose={() => setLightboxPhoto(null)}
+        images={personalInfo.photos}
+        index={lightboxIndex}
+        onClose={() => setLightboxIndex(null)}
+        onIndexChange={setLightboxIndex}
       />
     </section>
   );
